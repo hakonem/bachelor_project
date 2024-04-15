@@ -10,8 +10,8 @@ from Home import papers, topics
 def reset_input():
     # Clear inputs for PAPER SEARCH
     st.session_state.selected_topic = []
-    #st.session_state.start_date = datetime.strptime('01-2018', '%m-%Y')
-    #st.session_state.end_date = datetime.strptime('01-2022', '%m-%Y')
+    st.session_state.start_date = datetime.strptime('01-2018', '%m-%Y')
+    st.session_state.end_date = datetime.strptime('01-2022', '%m-%Y')
     st.session_state.date_interval = (st.session_state.start_date, st.session_state.end_date)
 
 
@@ -20,7 +20,11 @@ def reset_input():
 #****************
 
 st.header('PAPER SEARCH')
-st.subheader('Search for papers within the database using various search criteria.')
+st.subheader('Search for papers submitted to arXiv.org using various search criteria.')
+st.markdown('''You can select up to 5 topics - only papers matching ALL selections will be returned. You also have the option to narrow down your search by specifying a date range.  
+            
+Results are returned in a table which can be sorted by title and date, with links to the relevant arXiv page.
+            ''')
 
 
 #********
@@ -65,11 +69,11 @@ if selected_topics:
 
     # Filter papers by selected topics
     for topic in selected_topics:
-        filtered_df = papers[(papers['topic1'] == topic) | 
-                                (papers['topic2'] == topic) | 
-                                (papers['topic3'] == topic) | 
-                                (papers['topic4'] == topic) | 
-                                (papers['topic5'] == topic)]
+        filtered_df = filtered_df[(filtered_df['topic1'] == topic) | 
+                                (filtered_df['topic2'] == topic) | 
+                                (filtered_df['topic3'] == topic) | 
+                                (filtered_df['topic4'] == topic) | 
+                                (filtered_df['topic5'] == topic)]
     if date_interval:
         # Filter papers by selected date range
         filtered_df = filtered_df[(filtered_df['date'] >= start_date) & (filtered_df['date'] <= end_date)]

@@ -1,8 +1,8 @@
 import streamlit as st
 import pandas as pd
-import plotly.express as px
 from datetime import datetime
 from Home import papers, topics
+import plotly.express as px
 
 
 #***************
@@ -22,7 +22,7 @@ def reset_input():
 
 st.header('TOPIC SEARCH')
 st.subheader('Search for a specific topic and see how the interest in that topic has changed over time.')
-st.markdown('It\'s possible to search for up to 9 optional topics for comparison. You can also narrow down the date range using the slider.')
+st.markdown('It\'s possible to search for up to 9 additional topics for comparison. You can also narrow down the date range using the slider.')
 
 
 #********

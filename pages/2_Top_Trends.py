@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from datetime import date, datetime, timedelta
-from Home import papers, topics
+from Home import papers
 
 
 #***************
@@ -89,7 +89,7 @@ if number_topics:
     # Filter papers by selected date range
     filtered_papers = papers[(papers['date'] >= start_interval) & (papers['date'] <= end_interval)]
 
-    # Stack the tag columns and count occurrences
+    # Stack the topic columns and count occurrences
     tag_counts = filtered_papers[['topic1', 'topic2', 'topic3', 'topic4', 'topic5']].stack().value_counts()
 
     # Sort the tag counts in descending order
