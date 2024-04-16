@@ -3,7 +3,6 @@ import sqlite3
 import pandas as pd
 
 
-@st.cache_resource
 def create_connection(db_file):
     #Create a database connection to a SQLite database
     conn = None
@@ -14,7 +13,6 @@ def create_connection(db_file):
         print(e)
     return conn
 
-@st.cache_data
 def fetch_data(db_file='topics_data.db', table_name='topics_data'):
     #Fetch data from the database and return it as a DataFrame
     try:
@@ -48,9 +46,8 @@ def create_table(conn):
     except sqlite3.Error as e:
         print(e)
 
-#if __name__ == '__main__':
-    
-#    conn = create_connection('../topics_data.db')
-#    if conn is not None:
-#        create_table(conn)
-#        conn.close()
+# Function to close the connection
+def close_connection(conn):
+    if conn is not None:
+        conn.close()
+        

@@ -1,6 +1,7 @@
 import streamlit as st
-from db_manager import fetch_data
 import pandas as pd
+from data_import import import_csv_to_db
+from db_manager import fetch_data
 
 
 st.set_page_config(layout="wide")
@@ -25,8 +26,9 @@ def main():
 - **TOP TRENDS**: Select the number of topics to display and a date interval - find out the top trends in this period.
 - **PAPER SEARCH**: Search for relevant papers based on topic, with the option to narrow down the serch by date interval.
                     ''')
-   
+           
 
 if __name__ == "__main__":
+    import_csv_to_db('../tagged_papers_with_topics.csv')
     main()
     print(papers.shape)
