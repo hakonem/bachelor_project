@@ -1,4 +1,4 @@
-# USER MANUAL
+# USER MANUAL for TabulAI
 With this user manual we aim to provide clear and concise instructions to ensure users can easily install, run, and utilize our application.
 
 ## Installation Instructions:
