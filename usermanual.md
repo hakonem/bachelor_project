@@ -1,5 +1,20 @@
 # USER MANUAL
-With this user manual we aim to provide clear and concise instructions to ensure users can easily install, run, and utilize our application:
+With this user manual we aim to provide clear and concise instructions to ensure users can easily install, run, and utilize our application.
+
+## Requirements
+- streamlit==1.32
+- pandas==2.2.1
+- numpy==1.26.4
+- plotly==5.19.0
+- ete3~=3.1.3
+- anytree~=2.12.1
+- networkx~=3.2.1
+- matplotlib~=3.8.0
+- seaborn~=0.13.0
+- wordcloud~=1.9.3
+- Pillow~=10.0.1
+- pygwalker~=0.4.8.3
+- SQLAlchemy~=2.0.29
 
 ## Installation Instructions:
 
