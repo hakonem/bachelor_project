@@ -1,0 +1,89 @@
+[global]
+    # GLOBAL ##########################
+    # Default settings for widgets and state duplication warnings
+    disableWidgetStateDuplicationWarning = true
+    showWarningOnDirectExecution = false
+
+[server]
+    # SERVER ########################## 
+    # Basic server settings with a defined port and enhanced security settings
+    headless = false  # Keeps browser launch behavior on startup
+    runOnSave = false
+    port = 8501
+    enableCORS = true
+    enableXsrfProtection = true
+
+    folderWatchBlacklist = []
+
+    # Allowed values for fileWatcherType:
+    # * "auto"     : Streamlit will attempt to use the watchdog module, and
+    #                falls back to polling if watchdog is not available.
+    # * "watchdog" : Force Streamlit to use the watchdog module.
+    # * "poll"     : Force Streamlit to always use polling.
+    # * "none"     : Streamlit will not watch files.
+    # Default: "auto"
+    fileWatcherType = "poll"  # Keeping this as 'poll' for consistent file watching
+
+[client]
+    # CLIENT ##########################
+    # Client configuration for sidebar and error details visibility
+    toolbarMode = "viewer"
+    showErrorDetails = true
+    showSidebarNavigation = true
+
+
+[theme]
+    # THEME ##########################
+    # Theme settings defining the appearance of the app
+    base = "light"
+    backgroundColor = "white"
+    textColor = "black"
+    font = "sans serif"
+
+[layout]
+    # LAYOUT ##########################
+    # Global layout settings
+    layout = "wide"
+    initial_sidebar_state = "expanded"
+
+[ui]
+    # UI ##########################
+    # UI settings to hide unnecessary elements
+    hideTopBar = true
+
+[browser]
+    # BROWSER ##########################
+    # Browser-specific settings, disabling usage stats gathering by Streamlit.
+    # Default: true
+    gatherUsageStats = false
+    serverAddress = "localhost"
+
+[runner]
+    # RUNNER ##########################
+    # Runner settings for magic functions and rapid re-executions
+    # Allows to type a variable or string by itself in a single line of Python code to write it to the app. 
+    # But we want to define the variables and the text displayed in the app ourselves. So we will set this to false.
+    # Default: true
+    magicEnabled = false
+    fastReruns = true
+
+[logger]
+    # LOGGER ##########################
+    # Logger settings for monitoring and debugging
+
+    # Level of logging: 'error', 'warning', 'info', or 'debug'.
+    # Default: 'info'
+    level = "info"
+
+    # String format for logging messages. If logger.datetimeFormat is set,
+    # logger messages will default to `%(asctime)s.%(msecs)03d %(message)s`. See
+    # Python's documentation for available attributes:
+    # https://docs.python.org/2.6/develop/logging.html#formatter-objects
+    # Default: "%(asctime)s %(message)s"
+    messageFormat = "%(asctime)s %(message)s"
+
+
+
+
+
+
