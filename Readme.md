@@ -1,46 +1,45 @@
 # Bachelor Thesis Project 🎓
-## Title: Trend Analysis in AI Research - A Data-Driven Web Application 
+## Title: TabulAI - A Trend Analysis Tool for AI
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 
 ## Introduction
 The main goal of this project is to develop a modern web application which dynamically visualizes trend analysis in AI research. 
 
-As part of the bachelor thesis at OsloMet - Oslo Metropolitan University, this project unfolds an exploratory journey into the dynamic world of artificial intelligence (AI). The project is developed by a dedicated team from Oslomet, in collaboration with SINTEF and Ontotext, and it integrates both theoretical concepts and practical applications, laying the groundwork for more in-depth development in the future.
+As part of our bachelor thesis at OsloMet - Oslo Metropolitan University, this project unfolds an exploratory journey into the dynamic world of AI. The project is developed by a dedicated team from Oslomet, in collaboration with SINTEF and Ontotext, and it integrates both theoretical concepts and practical applications, laying the groundwork for more in-depth development in the future.
 
 ## Objectives
 - Create an intuitive and user-friendly platform for visualizing AI research trends.
 - Show top trends, top research topics, most popular topics in AI reasearch.
 - Visualize the hierarchical AI Topic Tree.
-- Process and analyze large datasets efficiently and accurately.
+- Process and analyse large datasets efficiently and accurately.
 - Implement machine learning and NLP techniques for data vectorization and similarity search.
 
 ## Scope
-- Data extraction and preprocessing: cleaning, filtering and pipelining
-- Data vectorisation, tagging and evaluation of tagging accuracy utilizing similarity search
-- Data storage and retrievel
-- Interactive data visualisation tool as a web application
+- Data extraction and preprocessing.
+- Data vectorization, tagging and evaluation of tagging accuracy utilizing similarity search.
+- Data storage and retrieval.
+- Interactive data visualization tool as a web application.
   
 
 ## Technologies and Tools
-- **Data Sources**: arXiv dataset for academic papers, AI topic list from DBPedia
+- **Data Sources**: arXiv dataset for academic papers, AI topic list from Ontotext.
 - **Vectorization**: KagiSearch, HuggingFace's NLP transformer models for generating text embedding.
-- **Similarity Search**: Utilizes Kagi to find cosine similarity to determine most relevant papers
-- **Python Integration**: Both backend and frontend development is based on Python.
-- **Data Analysis**: Jupyter Notebook for interactive development, MS Excel for data organization, and Kaggle for datasets and insights.
+- **Similarity Search**: Utilizes Kagi to find cosine similarity to determine most relevant papers.
+- **Python Integration**: Both back-end and front-end development is based on Python.
+- **Data Analysis**: Jupyter notebook for interactive development.
 - **Visualization**: Python frameworks and libraries: Pandas & Numpy for data manipulation, Streamlit, Plotly Dash for advanced data visualizations.
 
-## 1. Datasets - Data Sources
-   * AI Topic list from DBPedia (.tsv, .csv, .json)
-   * arXiv dataset with subcategories (academic papers attributes) (.xml, .json)
+## 1. Data extraction and preprocessing
+   * AI Topic list from Ontotext (.csv)
+   * arXiv dataset with subcategories (academic papers attributes) (.csv)
 
 ## 2. Vectorization 
 
   ### Methodology:
   - Pre-training the model with AI topics by vectorization.
-  - Vectorizing the arXiv dataset
+  - Vectorizing the arXiv dataset.
   - Tagging papers with AI topics.
-  - Apply similarity search analysis and evaluation
-  - Visualization - Streamlit app.
+  - Apply similarity search analysis and evaluation.
 
   ### Alternative solutions explored
 
@@ -90,8 +89,7 @@ As part of the bachelor thesis at OsloMet - Oslo Metropolitan University, this p
   First and foremost, it’s crucial to recognize that no single algorithm reigns supreme in all scenarios. The choice of the most suitable algorithm depends on the nature of the data, the dimensionality, and the specific problem at hand. Therefore, flexibility in algorithm selection is key.
   Reference: [Vector Similarity Search](https://medium.com/@serkan_ozal/vector-similarity-search-53ed42b951d9)
 
-## 3. VISUALISATION 
-* _Sirin: Citation needed – references will be added at the bottom of this doc._
+## 3. Visualization 
   
 Designing a dashboard to visualize the evolution of AI topics over time and allowing comparisons between topics requires a thoughtful approach. There are some steps we need to consider carefully to navigate this task:
 
@@ -105,7 +103,7 @@ Designing a dashboard to visualize the evolution of AI topics over time and allo
   * Line Charts: Ideal for showing trends over time. A line chart could be used to display the evolution of interest in various AI topics by plotting the number of publications per topic over time.
   * Bar Charts: Useful for comparing quantities. These can be used to compare the number of publications between different AI topics in a given year or range of years.
   * Scatter Plots: Good for visualising relationships between two variables. This could help in understanding the correlation between the number of publications and another metric, like citations.
-  *Heatmaps: Effective for showing the distribution of data across two dimensions. A heatmap could be used to visualize the density of publications across different AI topics and time periods.
+  * Heatmaps: Effective for showing the distribution of data across two dimensions. A heatmap could be used to visualize the density of publications across different AI topics and time periods.
   
   3. Interactive Elements
   Incorporating interactive elements into our dashboard is key to allowing users to choose what to display. This can be done through:
@@ -214,11 +212,6 @@ pip install -r requirements.txt
 - [Google Colab](https://colab.research.google.com/)
 - [SINTEF](https://www.sintef.no/)
 - [OsloMet](https://www.oslomet.no/en/)
-
-## Contact 📧
-- Sirin Koca - s182211@oslomet.no
-- Ahmet Okur - s364568@oslomet.no
-- Emma Louise Håkonsen - s362073@oslomet.no
 
 ---
 [OsloMet, Department of Computer Science](https://www.oslomet.no/en/about/tkd/it) | [SINTEF](https://www.sintef.no/en/) | Copyright © OsloMet // SINTEF
